@@ -1,0 +1,658 @@
+/* 主页 index.html 样式表 */
+
+/* 设置外层样式 */
+.top-bar-warpper{
+    /* 定义宽度 */
+    width: 100%;
+    /* 定义背景颜色 */
+    background-color: #333333;
+    /* 定义行高 */
+    line-height: 40px;
+    /* 固定行高 */
+    height: 40px;
+}
+/* 设置内层样式 */
+.top-bar{
+    /* 固定行高 */
+    height: 40px;
+}
+/* 定义top-bar中的文字效果 */
+.top-bar a{
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+}
+/* 设置a的hover效果 */
+.top-bar a:hover{
+    color: #ffffff;
+}
+/* 定义list位置 */
+.top-bar-list{
+    float: left;
+}
+/* 设置top-bar-list详细 */
+.top-bar-list li{
+    float: left;
+}
+/* 开启下拉框的定位 */
+.download-app{
+    position: relative;
+}
+/* 鼠标移入显示出下拉框 */
+.top-download-app:hover .qrcode,
+.top-download-app:hover .download-app::after{
+    display: block;
+    height: 148px;
+}
+/* 设置下拉框上的小三角 */
+.download-app::after{
+    /* 给予伪元素内容 */
+    content: '';
+    /* 变成行内块元素 */
+    display: block;
+    /* 定义宽高否则继承父元素 */
+    width: 0;
+    height: 0;
+    /* 设置边框 */
+    border: 8px solid transparent;
+    /* 去除上边框 */
+    border-top: none;
+    /* 定义下边框的颜色 */
+    border-bottom-color: #fff;
+    /* 开启绝对定位 调整位置 */
+    position: absolute;
+    /* 调整小三角的位置 */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /* 隐藏小三角 */
+    display: none;
+    /* 设置层级 */
+    z-index: 999;
+}
+/* 设置下载app 下拉框 */
+.download-app .qrcode{
+    /* 定义宽高 */
+    width: 124px;
+    height: 0px;
+    /* 设置溢出裁剪 */
+    overflow: hidden;
+    /* 设置行高防止内容溢出 */
+    line-height: 1px;
+    /* 设置背景颜色 */
+    background-color: #ffffff;
+    /* 设置阴影 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* 文字居中 */
+    text-align: center;
+    /* 开启绝对定位 */
+    position: absolute;
+    /* 调整位置 */
+    left: -40px;
+    /* 设置延时出现 */
+    transition: height 0.3s;
+    /* 设置层级 */
+    z-index: 999;
+}
+/* 设置下拉框中图片的大小 */
+.download-app .qrcode img{
+    width: 90px;
+    height: 90px;
+    margin: 17px;
+}
+/* 设置下拉框中的文字 */
+.download-app .qrcode span{
+    color: #000000;
+    font-size: 14px;
+}
+/* 定义notice位置 */
+.top-bar-notice{
+    float: right;
+    margin-right: 25px;
+}
+/* 设置notice详细 */
+.top-bar-notice li{
+    float: left;
+}
+/* 定义shopcar位置和细节 */
+.top-bar-shopcar{
+    float: right;
+    height: 40px;
+}
+/* 设置shopcar字体 */
+.top-bar-shopcar a{
+    width: 120px;
+    text-align: center;
+    background-color: #424242;
+}
+/* 设置shopcar 字体与字体图标的位置 */
+.top-bar-shopcar i{
+    margin-right: 2px;
+}
+/* 设置鼠标移入shopcar效果 */
+.top-bar-shopcar:hover a{
+    background-color: #ffffff;
+    color: #ff6700;
+    position: relative;
+    padding-bottom: 3px;
+    z-index: 1001;
+}
+/* 让shopcar下拉框鼠标移入显示出来 */
+.top-bar-shopcar:hover .shopcar-down{
+    height: 100px;
+}
+/* 给父元素.top-bar-shopcar 开启定位 */
+.top-bar-shopcar{
+    position: relative;
+}
+/* 设置shopcar的下拉框 */
+.top-bar-shopcar .shopcar-down{
+    /* 定义宽高 */
+    width: 315px;
+    height: 0px;
+    /* 设置背景颜色 掩盖下层 */
+    background-color: #fff;
+    /* 裁剪溢出 */
+    overflow: hidden;
+    /* 设置阴影 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* 水平居中 */
+    text-align: center;
+    /* 垂直居中 */
+    line-height: 100px;
+    /* 开启定位 */
+    position: absolute;
+    /* 调整位置 */
+    left: -195px;
+    top: 40px;
+    /* 设置延时显示 */
+    transition: height 0.3s;
+    /* 定义层级 */
+    z-index: 1000;
+}
+/* 设置shopcar下拉框中的字体 */
+.shopcar-down span{
+    font-size: 12px;
+    color: #424242;
+}
+/* 设置分割线line */
+.line{
+    width: 1px;
+    height: 13px;
+    color: #424242;
+    margin: 0px 8px;
+    margin-top: -1px;
+}
+
+
+
+
+
+
+
+/* 头部导航条 */
+/* 头部导航条左侧logo */
+.bar-warpper{
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+/* 头部导航条内部导航 */
+.bar-warpper .bar-body{
+    height: 100px;
+}
+/* 设置logo位置 */
+.mi-logo{
+    /* 设置logo位置 */
+    float: left;  
+    /* 定义宽高 内容浮动 不能撑开高度 */
+    width: 55px;
+    height: 55px;
+    /* 定义上面的距离 */
+    margin-top: 22px;
+    /*  让a标签相对于自己浮动  */
+    position: relative;
+    /* 裁剪溢出内容 */
+    overflow: hidden;
+    /* 移走让搜索引擎观看的字样 */
+    text-indent: -999px;
+}
+/* 设置logo */
+.mi-logo a{
+    /* 定义宽高 */
+    width: 55px;
+    height: 55px;
+    /* 定义初始偏移量让计算机可以进行计算 */
+    left: 0;
+    /* 定义背景颜色 */
+    background-color: #ff6700;
+    /* 加入mi的图片 */
+    background-image: url("./img/mi-logo.png");
+    /* 图片居中 */
+    background-position: center;
+    /* 开启绝对定位相对于父元素位移 */
+    position: absolute;
+    /* 开启延时响应 */
+    transition: left 0.2s;
+}
+/* 单独设置home logo */
+.mi-logo .home{
+    /* 加入home图片 */
+    background-image: url("./img/mi-home.png");
+    /* 设置偏移量 */
+    left: -55px;
+}
+/* 设置鼠标移入 mid-mi 移出    */
+.mi-logo:hover .mid-mi{
+    left: 55px;
+}
+/* 设置鼠标移入 home移入    */
+.mi-logo:hover .home{
+    left: 0px;
+}
+
+
+
+
+/* 中间字体导航 */
+/* 外层样式 */
+.top-bar-center{
+    /* 设置高度 */
+    height: 100px;
+    /* 定义位置 */
+    float: left;
+    /* 设置左边的距离 */
+    margin-left: 7px;
+    /* 撑开内容区域的位置 */
+    padding-left: 53px;
+    /* 垂直居中 */
+    line-height: 100px;
+    /* 字体大小 */
+    font-size: 16px;
+} 
+/* 设置每一个li的样式 */
+.bar-center > li{
+    /* 让列表浮动 */
+    float: left;
+}
+/* 给左侧导航条父元素开启相对定位 */
+.all-goods-werpper{
+    position: relative;
+}
+/* 内容区 左侧导航条 但是HTML写在头部center中 */
+.left-nav{
+    width: 234px;
+    height: 460px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: -115px;
+    z-index: 997;
+    padding:20px 0;
+    box-sizing: border-box;
+}
+/* 设置a的字体样式 */
+.left-nav a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 30px;
+}
+/* 设置鼠标移入的效果 */
+.bar-center .left-nav li a:hover{
+    background-color: #ff6700;
+    color: #fff;
+}
+/* 设置i的位置 */
+.left-nav a i{
+    float: right;
+    line-height: 42px;
+}
+/* 让这个页面中的全部商品分类消失 但是要占据位置 */
+.bar-center .all-goods{
+    visibility: hidden;
+}
+/* 字体的上下都可以点击 所以把a变成块元素 */
+.down-a > a{
+    display: block;
+    /* 设置每一个a之间的距离 */
+    padding: 0 10px;
+}
+/* 设置字体鼠标移入变色 */
+.bar-center li a:hover{
+    color: #ff6700;
+}
+
+/* 下拉层 */
+.down-white{
+    /* height: 228px; */
+    height: 0px;
+    width: 100%;
+    background-color: #ff6700;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transition: height 0.3s;
+    background-color: #fff;
+    z-index: 998;
+}
+/* 设置hover让下拉层显示 */
+.bar-center .open-white:hover ~ .down-white,
+.down-white:hover{
+    height: 228px;
+    border-top: 1px solid rgb(224, 224, 224);
+    box-shadow:  0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* 头部右侧搜索框 */
+/* 固定搜索框的位置 */
+.right-from{
+    width: 296px;
+    height: 50px;
+    float: right;
+    margin-top: 25px;
+    position: relative;
+}
+/* 设置搜索框位置 */
+.right-from .search-inp{
+    width: 222px;
+    height: 48px;
+    border: 1px solid rgb(224, 224, 224);
+    border-right: none;
+    padding: 0px 10px;
+    float: left;
+    font-size: 13px;
+}
+/* 设置按钮 */
+.right-from .search-btn{
+    width: 52px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 0;
+    float: left;
+    color: #616161;
+    font-size: 18px;
+}
+/* 设置聚焦后边框颜色变化 */
+.right-from .search-inp:focus,
+.right-from .search-inp:focus ~ .search-btn,
+.right-from .search-inp:focus ~ .from-down{
+    border-color: #ff6700;
+    display: block;
+
+}
+/* button鼠标移入效果变化 */ 
+.right-from .search-btn:hover{
+    background-color: #ff6700;
+    color: #fff;
+    border: 1px solid #ff6700;
+} 
+/* 搜索下拉框 */
+.right-from .from-down{
+    width: 242px;
+    height: 300px;
+    background-color: #fff;
+    border: 1px solid #ff6700;
+    border-top: none;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 50px;
+}
+/* 设置搜索下拉框里面的内容 */
+.from-down li a{
+    display: block;
+    line-height: 30px;
+    width: 242;
+    font-size: 12px;
+    padding-left: 17px;
+}
+/* 设置搜索内容鼠标移入效果 */
+.from-down li a:hover{
+    background-color: rgb(250, 250, 250);
+}
+
+
+
+
+
+
+/* 设置轮播图片效果 */
+.move-jpg{
+    height: 460px;
+    position: relative;
+}
+.move-jpg li a img{
+    width: 100%;
+    position: absolute; 
+}
+/* 设置导航点 */
+.move-jpg .point{
+    position: absolute;
+    bottom: 25px;
+    right: 35px;
+}
+.move-jpg .point a{
+    float: left;
+    width: 6px;
+    height: 6px;
+    background-color:  rgba(0, 0, 0, 0.4) ;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.4);
+    margin-left: 8px;
+}
+.point a:hover,
+.point a.active{
+    background-color: rgba(255,255,255,0.4);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+}
+/* 设置两边的箭头 */
+.next-go a{
+    width: 41px;
+    height: 69px;
+    background-image: url(./img/icon-slides.png);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+/* 左边的箭头 */
+.go-up{
+    left: 234px;
+    background-position: -84px 0;
+}
+/* 右边的箭头 */
+.go-down{
+    right: 0;
+    background-position: -125px 0;
+}
+/* 设置鼠标移入效果 */
+.go-up:hover{
+    background-position: 0 0;
+}
+.go-down:hover{
+    background-position: -42px 0;
+}
+
+
+
+
+
+
+
+
+
+/* 设置腰部导航条 */
+.right-nav{
+    width: 26px;
+    height: 206px;
+    position: fixed;
+    right: 50%;
+    margin-right: -639px;
+    bottom: 100px;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+/* 设置里面的所有a的样式 */
+.right-nav a{
+    display: block;
+    line-height: 40.5px;
+    font-size: 16px;
+    color: #b0b0b0;
+    text-align: center;
+    border-top: 1px solid rgb(224, 224, 224);
+    border-bottom: none;
+}
+/* 给父元素开启定位 */
+.right-nav .rphone-qrcode{
+    position: relative;
+}
+/* 设置手机二维码框 */
+.right-nav .my-phone{
+    display: none;
+    width: 130px;
+    height: 192px;
+    background-color: #fff;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    text-align: center;   
+    line-height: 20px;
+    /* border: 0.5px solid rgb(224, 224, 224); */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+/* 设置图片大小 */
+.my-phone img{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+/* 设置字体位置 */
+.my-phone span{
+    display: block;
+    margin-top: 12px;
+}
+/* 设置小箭头 */
+.right-nav .arro{
+    display: none;
+    width: 0px;
+    height: 0px;
+    border: 8px solid transparent;
+    border-right: none;
+    border-left-color:rgb(224, 224, 224);
+    position: absolute;
+    left: -20px;
+    top: 10px;
+}
+/* 设置覆盖小箭头 */
+.arro::before{
+    display: none;
+ content: '';
+ display: block;
+ width: 0px;
+ height: 0px;
+border: 8px solid transparent;
+border-right: none;
+border-left-color: #fff;
+position: absolute;
+left: -9px;
+ top: -8px;
+}
+/* 设置hover 让鼠标移入 显示出效果 */
+.phone-qrcode:hover .my-phone,
+.phone-qrcode:hover .arro,
+.phone-qrcode:hover .arro::before{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/* 设置广告层 */
+.midmi-gg{
+    height: 170px;
+    margin-top: 14px;
+}
+/* 让所有的元素都向左浮动 */
+.left-gg,
+.right.gg,
+.midmi-gg li{
+    float: left;
+}
+/* 设置ul的外层样式 */
+.left-gg{
+    width: 232px;
+    height: 168px;
+    background-color: #5f5750;
+    margin-right: 14px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+/* 给每一个li固定位置 */
+.left-gg li{
+    width: 76px;
+    height: 84px;
+    position: relative;
+}
+/* 做出线的效果 */
+.left-gg li::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 64px;
+    background-color: rgb(102,94,87);
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.left-gg li::after{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 1px;
+    background-color: rgb(102,94,87);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.left-gg li a{
+    display: block;
+    width: 76px;
+    height: 84px;
+    text-align: center;
+    font-size: 12px;
+    color: #cfccca;
+}
+.left-gg li a:hover{
+    color: #fff;
+}
+.left-gg li a i{
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.right-gg li{
+    width: 316px;
+    margin-right: 15px;
+}
+.right-gg li img{
+    width: 100%;
+    height: 170px;
+    vertical-align: top;
+}
+.right-gg li:last-child{
+    margin-right: 0px;
+}

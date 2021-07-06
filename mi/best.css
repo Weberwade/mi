@@ -1,0 +1,26 @@
+/* 通用样式 */
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.W{
+    width: 1226px;
+     /* 居中 */
+     margin: 0 auto;
+}
+
+/* 去除所有a的下划线 */
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* 定义body全局默认样式 */
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    min-width: 1226px;
+    color: #333;
+}
